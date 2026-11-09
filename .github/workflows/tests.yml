@@ -1,13 +1,14 @@
 name: Tests
-on:
-  pull_request:
-  push:
-    branches: [master]
-
-# Cancel a superseded run when new commits are pushed to the same PR. Besides saving
-# CI minutes, this closes the narrow window where two overlapping runs of the same
-# branch could publish a new runtime-log cache mid-matrix and desync the 8-way split.
-# Push runs on master are never cancelled, so every master run persists its log.
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#   push:
+#     branches: [master]
+# 
+# # Cancel a superseded run when new commits are pushed to the same PR. Besides saving
+# # CI minutes, this closes the narrow window where two overlapping runs of the same
+# # branch could publish a new runtime-log cache mid-matrix and desync the 8-way split.
+# # Push runs on master are never cancelled, so every master run persists its log.
 concurrency:
   group: tests-${{ github.ref }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}

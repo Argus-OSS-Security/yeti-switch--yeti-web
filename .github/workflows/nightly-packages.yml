@@ -1,9 +1,10 @@
 name: Nigthly packages build
 
-on:
-  push:
-    branches: [ master ]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [ master ]
+# 
 jobs:
   deb13:
     name: Debian 13 nightly package building

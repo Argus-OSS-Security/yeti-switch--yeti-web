@@ -1,9 +1,10 @@
 name: Build docker images
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '6 9 * * SUN'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   schedule:
+#     - cron: '6 9 * * SUN'
+# 
 jobs:
   deb13-build-image:
     name: Build deb13 images for CI

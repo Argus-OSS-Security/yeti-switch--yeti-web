@@ -1,9 +1,10 @@
 name: Release process
 
-on:
-  release:
-    types: [ published ]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   release:
+#     types: [ published ]
+# 
 jobs:
   deb13:
     name: Debian 13 release package building
